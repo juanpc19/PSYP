@@ -1,0 +1,4 @@
+[{"apellidos": "Perez Caballero", "correo": "Juan@gmail.com", "id": 2, "idTienda": 2, "nombre": "Juan", "numCuenta": "ES12 3456 7890 12 123456782", "telefono": 686868682},
+ {"apellidos": "Sevilla Alvarez", "correo": "Jaime@gmail.com", "id": 3, "idTienda": 3, "nombre": "Jaime", "numCuenta": "ES12 3456 7890 12 123456783", "telefono": 686868683},
+  {"apellidos": "Sanchez de la Vega", "correo": "Pedro@gmail.com", "id": 4, "idTienda": 4, "nombre": "Pedro", "numCuenta": "ES12 3456 7890 12 123456784", "telefono": 686868684},
+   {"apellidos": "Gallardo Rodriguez", "correo": "MiguelGallardo@gmail.com", "id": 5, "idTienda": 1, "nombre": "Miguel", "numCuenta": "ES12 3456 7890 12 123456733", "telefono": 686868633}]
