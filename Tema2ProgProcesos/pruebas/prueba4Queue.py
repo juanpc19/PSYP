@@ -2,7 +2,7 @@ from multiprocessing import Process, Queue
 
 #crea proceso y lo pone en cola
 def productor(cola):
-    for i in range(1,11):
+    for i in range(1,1111):
         cola.put(i)
     cola.put(None)
 
