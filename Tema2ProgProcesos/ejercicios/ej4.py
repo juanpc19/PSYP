@@ -7,7 +7,7 @@ def leerFichero(extremo):
    
     try:
         #apertura archivo con autocierre requiere indentacion sig linea
-        with open("ficheros/numeros.txt", 'rt') as f:
+        with open("Tema2ProgProcesos\\ejercicios\\ficheros\\numeros.txt", 'rt') as f:
             #recorro archivo leyendo todas las lineas
             for linea in f.readlines():
                 #las voy enviando por pipe quitandoles el salto de lina con strip
@@ -39,12 +39,7 @@ def sumatorio(extremo):
     extremo.close()
     
 if __name__ == "__main__":
-    #terminal hecho codigo, me pone en la siguiente localizacion como usando cd, pero lo hace auto al ejecutar programa
-    directorio = "Tema2ProgProcesos/ejercicios" #ruta absoluta en la que me pondra el programa al ejecutar
-    # cambia el directorio usado actual
-    os.chdir(directorio)
-    # muestra el directorio usado actual
-    print("Directorio actual:", os.getcwd())
+   
     
     #creo coleccion tipo Queue
     izq, der = Pipe()
