@@ -1,7 +1,5 @@
 from multiprocessing import Process,Pipe
-import os
-import time
-        
+
 #productor
 def leerFichero(extremo):
    
@@ -39,7 +37,6 @@ def sumatorio(extremo):
     extremo.close()
     
 if __name__ == "__main__":
-   
     
     #creo coleccion tipo Queue
     izq, der = Pipe()
