@@ -9,10 +9,10 @@ def generadorIps(a1):
     #bucle 10 iteraciones
     for i in range(10):
         # genero partes de la ip 
-        segmento1 = random.randint(1, 255)
+        segmento1 = random.randint(0, 255)
         segmento2 = random.randint(0, 255)
         segmento3 = random.randint(0, 255)
-        segmento4 = random.randint(1, 255)
+        segmento4 = random.randint(0, 255)
 
         # junto las partes de la ip con puntos
         ip = f"{segmento1}.{segmento2}.{segmento3}.{segmento4}"
