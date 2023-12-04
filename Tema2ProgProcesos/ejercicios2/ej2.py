@@ -74,7 +74,7 @@ if __name__ == "__main__":
     p2=Process(target=filtraIps, args=(b1,b2))
     p3=Process(target=cosa, args=(c1,))
 
-    #inicio procesos y dejo que finalicen a su ritmo
+    #inicio procesos y dejo que finalicen a su ritmo haciendo que el main espere a la finalizacion de los procesos
     inicio=time()
     p1.start()
     final=time()
@@ -87,6 +87,10 @@ if __name__ == "__main__":
     p3.start()
     final3=time()
 
+    p1.join()
+    p2.join()
+    p3.join()
+    
     print(final-inicio)
     
     print(final2-inicio2)
