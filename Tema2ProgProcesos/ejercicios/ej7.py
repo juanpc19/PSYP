@@ -1,5 +1,5 @@
 from asyncio import Queue
-from multiprocessing import Pool, Process
+from multiprocessing import Process
 import os
 import time
 
