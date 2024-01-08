@@ -6,7 +6,7 @@ import bcrypt
 
 from flask_jwt_extended import create_access_token
 
-ficheroUsers="../tareaApiRest/ficheros/users.json"
+ficheroUsers="Tema1APIRest/tareaApiRest/ficheros/users.json"
 
 usersBP=Blueprint('users',__name__)
 

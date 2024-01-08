@@ -6,7 +6,7 @@ from flask import Blueprint, jsonify, request
 
 from flask_jwt_extended import jwt_required
 
-ficheroEmpleados="../tareaApiRest/ficheros/empleados.json"
+ficheroEmpleados="Tema1APIRest/tareaApiRest/ficheros/empleados.json"
 
 empleadosBP=Blueprint("empleados", __name__)
 

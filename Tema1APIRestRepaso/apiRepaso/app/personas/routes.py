@@ -1,9 +1,9 @@
 import json
 from flask import Blueprint, jsonify, request
 
-
-ficheroPersonas = r"D:\cosas formateo\Cosas grado 2\PSYP\Tema1APIRestRepaso\apiRepaso\ficheros\personas.json"
-#ficheroPersonas =  "../apiRepaso/ficheros/personas.json"
+ficheroPersonas = "Tema1APIRestRepaso\\apiRepaso\\ficheros\\personas.json"
+#ficheroPersonas = "Tema1APIRestRepaso/apiRepaso/ficheros/personas.json"
+#ambas rutas funcionan
 
 personasBP=Blueprint("personas", __name__)
 

@@ -6,9 +6,9 @@ from flask import Blueprint, jsonify, request
 
 from flask_jwt_extended import jwt_required
 
-ficheroTiendas="../tareaApiRest/ficheros/tiendas.json"
+ficheroTiendas="Tema1APIRest/tareaApiRest/ficheros/tiendas.json"
 
-ficheroEmpleados="../tareaApiRest/ficheros/empleados.json"
+ficheroEmpleados="Tema1APIRest/tareaApiRest/ficheros/empleados.json"
 
 #creo un objeto blueprint (le doy nombre)
 tiendasBP=Blueprint("tiendas", __name__)
