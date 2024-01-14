@@ -1,5 +1,6 @@
 import json
 from flask import Blueprint, jsonify, request
+from flask_jwt_extended import jwt_required
 
 ficheroPersonas = "Tema1APIRestRepaso\\apiRepaso\\ficheros\\personas.json"
 #ficheroPersonas = "Tema1APIRestRepaso/apiRepaso/ficheros/personas.json"
@@ -7,12 +8,14 @@ ficheroPersonas = "Tema1APIRestRepaso\\apiRepaso\\ficheros\\personas.json"
 
 personasBP=Blueprint("personas", __name__)
 
+#funcion que guarda abre nombreFichero en modo lectura guardando esta lectura en archivo lo cual me permite leer o modificar el archivo desde python, 
+# carga el objeto creado (archivo) en tiendas en formato json,
+# cierra el archivo y devuelve el contenido del mismo que ahora esta en tiendas en el return
 def leerFichero(nombreFichero):
     archivo = open(nombreFichero, "r") 
     tiendas = json.load(archivo)
     archivo.close()
     return tiendas
-
 
 #funcion que recibe un diccionario abre nombreFichero en modo escritura guardando esta escritura en archivo lo cual me permite leer o modificar el archivo desde python,
 # sobreescribe el objeto creado (archivo) con los valores de tiendas (el diccionario con valor/valores de turno) y cierra el archivo
@@ -41,6 +44,7 @@ def getPersona(id):
     return {"Error:": "Persona no encontrada"}, 404
 
 @personasBP.post("/")
+@jwt_required()
 def addPersona():
     personas=leerFichero(ficheroPersonas)
     
@@ -51,6 +55,7 @@ def addPersona():
         personas=escribeFichero(ficheroPersonas,personas)
         
         return persona, 201
+    
     return {"Error:":"La peticion debe ser JSON"}, 415
 
 @personasBP.put("/<int:id>")
@@ -66,9 +71,9 @@ def modificarPersona(id):
                 for campo in nuevaPersona:
                     persona[campo]=nuevaPersona[campo]
         
-        escribeFichero(ficheroPersonas,personas)
+                escribeFichero(ficheroPersonas,personas)
         
-        return persona, 200
+                return persona, 200
     return {"Error:": "La peticion debe ser JSON"}, 415
 
 @personasBP.delete("/<int:id>")

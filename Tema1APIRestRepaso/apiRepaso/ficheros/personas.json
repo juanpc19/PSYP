@@ -1,7 +1,1 @@
-[
-    {"id":1,"nombre":"Fernando","apellidos":"Galinda","direccion":"Mi casa","telefono":"665876895","idDepartamento":1},
-    {"id":2,"nombre":"Jose","apellidos":"Ramirez","direccion":"En la esquina","telefono":"656477878","idDepartamento":4},
-    {"id":3,"nombre":"Juan","apellidos":"Lopez","direccion":"ahi al lao","telefono":"678676564","idDepartamento":2},
-    {"id":4,"nombre":"Sergio","apellidos":"Vega","direccion":"fondo del pasillo","telefono":"678343564","idDepartamento":3}
-    ]
-    
+[{"id": 1, "nombre": "Fernando", "apellidos": "Galinda", "direccion": "Mi casa", "telefono": "665876895", "idDepartamento": 1}, {"id": 2, "nombre": "Jose", "apellidos": "Ramirez", "direccion": "En la esquina", "telefono": "656477878", "idDepartamento": 4}, {"id": 3, "nombre": "Juan", "apellidos": "Lopez", "direccion": "ahi al lao", "telefono": "678676564", "idDepartamento": 2}, {"id": 4, "nombre": "Sergio", "apellidos": "Vega", "direccion": "fondo del pasillo", "telefono": "678343564", "idDepartamento": 3}, {"id": 5, "nombre": "put", "apellidos": "saza", "direccion": "danuvio", "telefono": "678343000", "idDepartamento": 2}, {"id": 6, "nombre": "Pepin", "apellidos": "patch2", "direccion": "danuvio", "telefono": "678343000", "idDepartamento": 2}, {"id": 7, "nombre": "Fernando", "apellidos": "Galinda", "direccion": "Mi casa", "telefono": "665876895", "idDepartamento": 1}, {"id": 8, "nombre": "Fernando", "apellidos": "Galinda", "direccion": "Mi casa", "telefono": "665876895", "idDepartamento": 1}]
