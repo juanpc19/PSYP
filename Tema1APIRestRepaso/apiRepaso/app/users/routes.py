@@ -63,7 +63,7 @@ def loginUser():
                 passwordFile=userFile["password"]
                 if bcrypt.checkpw(password, bytes.fromhex(passwordFile)):
                     token=create_access_token(identity=username)
-                    return {"token: ": token}, 200
+                    return {"token": token}, 200
                 
                 
                 return {"Error" : "Contraseña erronea, no tiene permiso: "}, 401
