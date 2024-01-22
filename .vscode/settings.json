@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./Tema3ProgDeHilos/clase/semaforos"
+    ]
+}
