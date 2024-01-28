@@ -14,30 +14,24 @@ class NumeroOculto(Thread):
     def run (self):
         
         while NumeroOculto.numeroAdivinadoGlobal==False:
-           
-            #quizas probar con NumeroOculto.self.candado.acquire()
-            
+            #hago lock antes de comprobacion y de producir numero y mostrarlo por pantalla 
+            NumeroOculto.candado.acquire()
             numeroRandom=random.randint(0,12)
             
             print("soy el hilo: ",self.getName(), ". Numero producido:", numeroRandom)
             
-            NumeroOculto.candado.acquire()
             if numeroRandom==NumeroOculto.numeroAdivinarGlobal:
                 
                 NumeroOculto.numeroAdivinadoGlobal=True
                 print("soy el hilo: ",self.getName(), ". Numero encontrado")
                 
+            #si tras comprobacion no coincide y necesito mas numeros hago release
+            NumeroOculto.candado.release()
                 
-                break #hace break de hilo actual no de los demas
-            else:
-                
-                NumeroOculto.candado.release()
+               
               
             
-            #deberia parar aqui la ejecucion de todos los hilos al cambiarse la global a true,
-            #pero si ya hay un hilo ya iniciado en lo que se cambia el valor de la global 
-            #en la iteracion actual, este puede seguir haciendo iteraciones, no se como leches parar eso,
-            # SOS
+            
             
                 
                 
