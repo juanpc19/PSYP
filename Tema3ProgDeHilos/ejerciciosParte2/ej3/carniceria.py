@@ -10,7 +10,7 @@ class Carniceria(Thread):
         Thread.__init__(self, name=nombre)
         
     def run(self):
-        print("el cliente ", self.name, "esta dentro de la carniceria")#quitar esta linea si genera confusion pero creo k esta bien
+        print("el cliente ", self.name, "esta dentro de la carniceria")
         Carniceria.semaforo.acquire()
         print("el cliente ", self.name, "esta siendo atendido")
         time.sleep(random.randint(1,11))

@@ -3,16 +3,14 @@ from threading import Condition
 from productor import Productor
 from consumidor import Consumidor
 
-if __name__=="__main__":
+if __name__ == "__main__":
+    cola = Queue(1)
     cond = Condition()
-    cola = Queue()
+
+    prod = Productor("prod", cola, cond)
+    cons = Consumidor("cons", cola, cond)
     
-    prod =Productor("prod")
-    cons=Consumidor("")
-   
     cons.start()
     prod.start()
-    
-    
  
     
