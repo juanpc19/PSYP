@@ -1,5 +1,3 @@
-
-
 from ejemplo1 import Cajero
 
 
