@@ -1,15 +1,19 @@
 
-from threading import Event
-from  numeroOcultoEvento import NumeroOcultoEvento
+
+from threading import Barrier
+from carrera import Carrera
 
 
 if __name__=="__main__":
-    evento=Event()
-    evento.clear()
     
+    barrera=Barrier(10)
     hilos=[]
     
     for i in range (10):
-        hilo=NumeroOcultoEvento(str(i),evento)
+        hilo=Carrera(str(i),barrera)
         hilo.start()
-  
+        hilos.append(hilo)
+        
+    for h in hilos:
+        h.join()
+        
