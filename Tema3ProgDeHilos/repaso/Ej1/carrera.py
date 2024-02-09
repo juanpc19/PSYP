@@ -13,11 +13,11 @@ class Carrera(Thread):
     def mensajeSalida():
         print("Salida!")
     
-    def __init__(self, nombre, barrera=Barrier, cond=Condition, timer=Timer(3, mensajeSalida)):
+    def __init__(self, nombre, barrera=Barrier, cond=Condition):
         Thread.__init__(self, name=nombre)
         self.barrera = barrera
         self.cond=cond
-        self.timer=timer
+       
         
         
     def run(self):
@@ -32,8 +32,14 @@ class Carrera(Thread):
                 
         with self.cond:
             if Carrera.salida==False:
-                self.timer.start()
-                
+                 
+                print("3")
+                time.sleep(random.randint(1,1))  
+                print("2")
+                time.sleep(random.randint(1,1))  
+                print("1")
+                time.sleep(random.randint(1,1))  
+                print("salida!")
                 Carrera.salida=True
                 self.cond.notify_all()
                 

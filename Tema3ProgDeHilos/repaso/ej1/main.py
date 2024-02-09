@@ -27,3 +27,4 @@ if __name__=="__main__":
 #hago delay con timesleep porque si hago timer propio pa lanzar hilo solo sirve para ponerse en linea salida no para salir, 
 # una vez esta en linea salida el hilo ya ha empezado y no puedo hacerle otro start con timer,
 # y la rotura de la barrera se da sola al llegar los 10 hilos por lo que no puedo pararla durante 3 segundos o romperla a los 3 segundos
+#el timer no es buena idea porque reinicia el proceso y explota
