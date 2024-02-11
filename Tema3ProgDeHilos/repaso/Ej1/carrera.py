@@ -1,4 +1,3 @@
-
 import random
 from threading import Barrier, Condition, Thread, Timer
 import time
