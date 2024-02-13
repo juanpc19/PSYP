@@ -3,10 +3,7 @@ from threading import Barrier, Event, Timer
 import time
 from pasoPeatones import PasoPeatones
 
-
-
-
-
+ 
 if __name__=="__main__":
     
     
